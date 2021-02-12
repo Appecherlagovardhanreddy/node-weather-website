@@ -1,4 +1,4 @@
-console.log("client side js id loaded")
+
 
 // fetch api  runs in browser  
 // then is the return value of fetch
