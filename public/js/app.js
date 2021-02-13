@@ -3,11 +3,11 @@
 // fetch api  runs in browser  
 // then is the return value of fetch
 
-fetch('http://puzzle.mead.io/puzzle').then((response)=>{
-    response.json().then((data)=>{
-            console.log(data)
-    })
-})
+// fetch('http://puzzle.mead.io/puzzle').then((response)=>{
+//     response.json().then((data)=>{
+//             console.log(data)
+//     })
+// })
 
 // fetch('http://localhost:3000/weather?address=anantapur').then((res)=>{
 //     res.json().then((data)=>{
@@ -34,7 +34,7 @@ search.addEventListener('submit',(e)=>{
      
     message1.textContent = 'Loading..'
     message2.textContent = ''
-    fetch('http://localhost:3000/weather?address=' + area).then((res)=>{
+    fetch('/weather?address=' + area).then((res)=>{
         res.json().then((data)=>{
             if(data.error){
             message1.textContent = data.error

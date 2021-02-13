@@ -18,6 +18,7 @@ const publicpath = path.join(__dirname,'../public')
 const partialspath = path.join(__dirname,'/views/partials')
 
 const app = express()
+const port = process.env.PORT || 3000
 
 app.set('view engine', 'hbs')
 // setting handle bars
@@ -119,6 +120,6 @@ app.get('*',(req,response)=>{
 // app.com/help
 // app.com/about
 
-app.listen(3000,()=>{
-    console.log("Runing on port 3000")
+app.listen(port,()=>{
+    console.log("Runing on port ",+ port)
 })
